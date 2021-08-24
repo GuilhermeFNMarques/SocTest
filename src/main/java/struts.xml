@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="Test" extends="struts-default">
+
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="viewListar" class="view.ExamesView">
+            <result name="lista">/listar.jsp</result>
+
+        </action>
+        
+        <action name="viewAdicionar" class="view.AdicionarView">
+            <result name="adiciona">/adicionar.jsp</result>
+
+        </action>
+        
+        <action name="viewExcluir" class="view.ExcluirView">
+            <result name="exclui">/excluir.jsp</result>
+
+        </action>
+        
+        <action name="viewAlterar" class="view.AlterarView">
+            <result name="altera">/atualizar.jsp</result>
+
+        </action>
+
+    </package>
+</struts>
